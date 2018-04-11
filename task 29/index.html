@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task 29</title>
+    <style></style>
+</head>
+<body>
+<table>
+    <tr>
+        <td>名称</td>
+        <td><input type="text"></td>
+        <td>
+            <button>验证</button>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td id="info">必填，长度为4~16个字符</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<script>
+  var input = document.getElementsByTagName("input")[0];
+  var button = document.getElementsByTagName("button")[0];
+  var info = document.getElementById("info");
+  /*
+  * 计算字符串长度
+  * @param {string} str 输入的字符串
+  * @return {number} 字符串长度
+  */
+  function countLength (str) {
+    var inputLength = 0
+    for (var i = 0; i < str.length; i++) {
+      var charCode = str.charCodeAt(i)
+      if (charCode >= 0 && charCode <= 127) {
+        inputLength += 1
+      } else {
+        inputLength += 2
+      }
+    }
+    return inputLength;
+  }
+
+  /**
+   * 验证按钮事件函数
+   */
+  function validate () {
+    var inputValue = input.value;
+    var inputLength = countLength(inputValue);
+
+    if (inputLength === 0) {
+      info.innerHTML = "名称不能为空";
+      input.style.borderColor = "red";
+      info.style.color = "red";
+    } else if (inputLength >= 4 && inputLength <= 16) {
+      info.innerHTML = "格式正确";
+      input.style.borderColor = "green";
+      info.style.color = "green";
+    } else {
+      info.innerHTML = "请输入长度为4~16的字符";
+      input.style.borderColor = "red";
+      info.style.color = "red";
+    }
+  }
+
+  //为验证按钮绑定事件函数
+  button.addEventListener("click", validate, false);
+</script>
+</body>
+</html>

@@ -1,0 +1,671 @@
+@charset "utf-8";
+/*reset*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,form,fieldset,input,p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1280px;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+input,select,textarea {
+    outline:none;
+    border:none;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+}
+
+/*清浮动*/
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*头部*/
+.header {
+    height: 57px;
+    line-height: 57px;
+}
+
+.header-logo {
+    margin-left: 58px;
+}
+
+.header-logo h1 {
+    padding-left: 44px;
+    height: 57px;
+    font-family: "SimHei";
+    font-size: 21px;
+    background: url("../images/icons/book-sm.png") left center no-repeat;
+}
+
+.header-nav {
+    margin-right: 66px;
+    height: 57px;
+    font-size: 14px;
+}
+
+.nav-bar {
+    position: relative;
+    height: 57px;
+}
+
+.nav-bar li {
+    float: left;
+    width:100px;
+    text-align: center;
+}
+
+.move {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 4px solid #e74f4d;
+    -webkit-transition: left .4s ease-in-out;
+    -moz-transition: left .4s ease-in-out;
+    -ms-transition: left .4s ease-in-out;
+    -o-transition: left .4s ease-in-out;
+    transition: left .4s ease-in-out;
+}
+
+.nav-bar li:nth-child(1):hover ~ .move {
+    left: 0;
+}
+
+.nav-bar li:nth-child(2):hover ~ .move {
+    left: 100px;
+}
+
+.nav-bar li:nth-child(3):hover ~ .move {
+    left: 200px;
+}
+
+.nav-bar li:nth-child(4):hover ~ .move {
+    left: 300px;
+}
+
+.nav-bar li:nth-child(5):hover ~ .move {
+    left: 400px;
+}
+
+.log-in {
+    display: inline-block;
+    margin-left: 30px;
+    padding-left: 20px;
+    background: url("../images/icons/log-in.png") left center no-repeat;
+}
+
+/*Banner*/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 690px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 690px;
+    overflow: hidden;
+}
+
+.banner-img img {
+    width: 100%;
+}
+
+.banner-info {
+    position: absolute;
+    left: 118px;
+    top: 230px;
+    color: #fff;
+}
+
+.banner-info h2 {
+    margin-bottom: 30px;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.banner-info p {
+    font-size: 21px;
+}
+
+.banner-btn {
+    display: block;
+    margin-top: 66px;
+    width: 331px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 30px;
+    background: #e74f4d;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*Description*/
+.description {
+    width: 100%;
+    height: 250px;
+    font-family:"SimHei";
+    font-size: 14px;
+    text-align: center;
+}
+
+.description-item {
+    float: left;
+    width: 25%;
+}
+
+.description-item:hover {
+    color: #e74f4d;
+}
+
+.description-item img {
+    margin:46px auto;
+    width: 42px;
+    height: 42px;
+}
+
+.description-item p {
+    padding: 0 80px;
+    height: 52px;
+    border-right: 2px solid #aaa;
+}
+
+.description-item:last-child p {
+    border-right: none;
+}
+
+/*Activities Search*/
+.activities-search {
+    padding-top: 53px;
+    width: 100%;
+    height: 340px;
+    color: #fff;
+    text-align: center;
+    background: url("../images/map.jpg") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.activities-search h3 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.line {
+    display: inline-block;
+    width: 30px;
+    border-top:3px solid;
+    -webkit-transition: width .4s ease-in-out;
+    -moz-transition: width .4s ease-in-out;
+    -ms-transition: width .4s ease-in-out;
+    -o-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+}
+
+.activities-search .line {
+    margin: 10px auto 20px;
+    border-top-color: #fff;
+}
+
+.activities-search h3:hover ~ .line {
+    width: 250px;
+}
+
+.search-bar {
+    margin-top: 50px;
+}
+
+.search-bar select {
+    margin:0 30px;
+    padding: 0 38px 0 12px;
+    width: 236px;
+    height: 36px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff url("../images/icons/down-arrow.jpg") 208px center no-repeat;
+}
+
+.search-btn {
+    width: 236px;
+    height: 36px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 26px;
+    text-indent: 26px;
+    border: none;
+    background: #be4e48;
+}
+
+/*Activity Show*/
+.activities-show {
+    padding-top: 102px;
+    height: 605px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.show-item {
+    display: inline-block;
+    margin: 0 36px;
+    width: 214px;
+}
+
+.show-img {
+    width: 214px;
+    height: 336px;
+    overflow: hidden;
+}
+
+.show-img img {
+    width: 214px;
+    height: 336px;
+}
+
+.show-info {
+    margin-top: 13px;
+}
+
+.show-info h4 {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.opposite .show-info {
+    margin-top: 0;
+}
+
+.opposite .show-info h4 {
+    font-size: 24px;
+    text-indent: 22px;
+    letter-spacing: 22px;
+}
+
+/*Introduction*/
+.intro-top {
+    width: 100%;
+    height: 565px;
+    text-align: center;
+}
+
+.intro-banner {
+    position: relative;
+    float: left;
+    width: calc((2 * 100%) / 3);
+    height: 565px;
+}
+
+.intro-banner-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.intro-banner-img img {
+    width: 100%;
+}
+
+.intro-banner-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 130px;
+    font-size: 22px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.intro-banner-text p:nth-child(1) {
+    font-size: 50px;
+    line-height: 1;
+}
+
+.intro-banner-text p:nth-child(2) {
+    font-size: 158px;
+    line-height: 1;
+}
+
+.intro-item {
+    float: left;
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+.intro-top .intro-item {
+    position: relative;
+    padding-top: 164px;
+}
+
+.intro-top .intro-item h3 {
+    margin-bottom: 32px;
+    font-size: 20px;
+}
+
+.intro-top .intro-item h3 span {
+    color: #e74f4d;
+}
+
+.intro-top .intro-item p {
+    padding: 0 70px;
+    font-family:"SimSun";
+    color: #b0b0b0;
+    line-height: 32px;
+    text-align: left;
+}
+
+.intro-top .more-btn {
+    margin: 40px auto 25px;
+    width: 106px;
+    height: 34px;
+    line-height: 34px;
+    color: #e4666a;
+    border: 1px solid #e4666a;
+    cursor: pointer;
+}
+
+.btn-bar .btn {
+    display: inline-block;
+    margin: 0 12px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #929292;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn-bar .active {
+    background-color: #929292;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    border-width: 15px 26px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.triangle-left {
+    margin-left: -52px;
+    left: 0;
+    border-right-color: #fff;
+}
+
+.intro-bottom {
+    width: 100%;
+    height: 518px;
+    text-align: center;
+}
+
+.intro-bottom .intro-item {
+    position: relative;
+    padding-top: 174px;
+    font-family:"SimHei";
+    font-size: 21px;
+}
+
+.intro-item-l {
+    color: #fff;
+    background: #e7504d;
+}
+
+.intro-item .line {
+    margin: 25px auto;
+    border-top-color: #fff;
+}
+
+.intro-item > p:hover ~ .line {
+    width: 200px;
+}
+
+.intro-bottom .more-btn span {
+    display: inline-block;
+    width: 170px;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+}
+
+.intro-item-l .more-btn span {
+    border: 1px solid #fff;
+}
+
+.intro-item-m .line {
+    border-top-color: #000;
+}
+
+.intro-item-m .more-btn span {
+    border: 1px solid #000;
+}
+
+.triangle-right {
+    margin-right: -52px;
+    right: 0;
+    border-left-color: #fff;
+}
+
+.intro-item-r {
+    float: left;
+    width: calc(100% / 3);
+    height: 100%;
+    overflow: hidden;
+}
+
+.intro-item-r img {
+    width: 100%;
+}
+
+/*Volunteer*/
+.volunteer {
+    padding-top: 120px;
+    height: 750px;
+}
+
+.volunteer-header {
+    text-align: center;
+}
+
+.volunteer-header h3 {
+    font-family: "SimHei";
+    font-size: 21px;
+}
+
+.volunteer-header .line {
+    border-top-color: #e7504d;
+}
+
+.volunteer-header h3:hover ~ .line {
+    width: 180px;
+}
+
+.volunteer-header p {
+    margin-top: 15px;
+    color: #aaa;
+}
+
+.volunteer-body {
+    margin: 108px auto;
+    width: 1002px;
+}
+
+.clause {
+    float: left;
+    width: 292px;
+}
+
+.clause-item {
+    margin-bottom: 40px;
+}
+
+.clause-item h4 {
+    font-family:"SimHei";
+    font-size: 14px;
+}
+
+.clause-item p {
+    margin-top: 22px;
+    font-family:"SimSun";
+    color: #a5a3a2;
+    line-height: 22px;
+}
+
+.clause-item .more-btn {
+    float: right;
+    padding-left: 16px;
+    width: 46px;
+    line-height: 22px;
+    background: url("../images/icons/down-arrow.png") left center no-repeat;
+}
+
+.personal-info {
+    float: right;
+    width: 640px;
+}
+
+.personal-info form {
+    font-size: 0;
+    margin: -14px -7px;
+}
+
+.personal-info input,
+.personal-info textarea {
+    font-family: "Microsoft YaHei", sans-serif;
+    margin: 14px 7px;
+    background: #ececee;
+}
+
+.personal-info input[type="text"] {
+    padding: 0 20px;
+    width: 313px;
+    height: 42px;
+    line-height: 42px;
+}
+
+.personal-info textarea {
+    padding: 10px 20px;
+    width: 640px;
+    height: 120px;
+}
+
+.personal-info input[type="submit"] {
+    width: 640px;
+    height: 40px;
+    font-size: 14px;
+}
+
+/*Contact*/
+.contact {
+    padding-top: 90px;
+    height: 358px;
+    color: #fff;
+    text-align: center;
+    background: #32353e;
+}
+
+.contact h3 {
+    font-family:"SimHei";
+    font-size: 21px;
+}
+
+.email-input {
+    margin: 30px 0 36px;
+    font-size: 0;
+    line-height: 40px;
+}
+
+.email-input input[type="text"] {
+    padding: 0 10px;
+    width: 430px;
+    height: 40px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.email-input input[type="submit"] {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #6f7178;
+    vertical-align: top;
+}
+
+.share-bar {
+    font-size: 0;
+}
+
+.share-icon {
+    display: inline-block;
+    margin: 0 14px;
+    width: 24px;
+    height: 25px;
+    background: url("../images/icons/share.png") no-repeat;
+}
+
+/*Footer*/
+.footer {
+    height: 58px;
+    line-height: 58px;
+    color: #fff;
+    background: #303039;
+}
+
+.copyright {
+    margin-left: 100px;
+    float: left;
+}
+
+.back {
+    margin-right: 40px;
+    float: right;
+}
